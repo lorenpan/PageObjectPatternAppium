@@ -1,7 +1,7 @@
 {
   "android": {
     "platformName": "android",
-    "platformVersion": "7.0",
+    "platformVersion": "7.1.1",
     "app": {
       "local": "./build/wordpress.apk"
     },
@@ -20,7 +20,7 @@
     "wdaLaunchTimeout": 80000,
     "wdaConnectionTimeout": 80000,
     "preventWDAAttachments": true,
-    "usePrebuiltWDA": true,
+    "useNewWDA": true,
     "clearSystemFiles": true,
     "shouldUseSingletonTestManager": false,
     "simpleIsVisibleCheck": true,
@@ -31,8 +31,8 @@
       "machineIP": "127.0.0.1",
       "simulators": [
         {
-          "deviceName": "iPhone 7",
-          "OS": "11.4"
+          "deviceName": "iPhone 6",
+          "OS": "12.0"
         }
       ]
     }

@@ -17,15 +17,19 @@ public class LoginTest {
     AccountsPage accountsPage;
     UserCredentials credentials;
 
-    @BeforeMethod(alwaysRun = true)
+    /*@BeforeMethod(alwaysRun = true)
     public void setUp() {
         loginPage = new LoginPage(AppiumDriverManager.getDriver());
         accountsPage = new AccountsPage(AppiumDriverManager.getDriver());
         credentials = new UserCredentials("vodqa@gmail.com", "Hello12345678");
-    }
+    }*/
 
     @Test(groups = "Parallel")
     public void loginWithValidUser() throws InterruptedException, IOException {
+    	loginPage = new LoginPage(AppiumDriverManager.getDriver());
+        accountsPage = new AccountsPage(AppiumDriverManager.getDriver());
+        credentials = new UserCredentials("vodqa@gmail.com", "Hello12345678");
+//        credentials = new UserCredentials("panyiran0418@163.com", "Newuser@1");
         boolean userNameLoggedIn =
             loginPage.login(credentials)
                 .waitForWelcomePage().verifyUserIsLoggedIn();
